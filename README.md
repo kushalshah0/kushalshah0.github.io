@@ -1,10 +1,10 @@
 # My Portfolio
 Welcome to a glimpse of my capabilities and experiences as a web developer! This portfolio serves as a showcase of my expertise, presenting a collection of projects and skills that highlight my dedication to crafting innovative web solutions. Explore and discover how my passion for coding and design intertwines, creating impactful and dynamic digital experiences.
 
-### [Live Website](https://portfolio.kushalshah.com.np/)
+### [Live Website](https://kushalshah0.github.io)
 ## Some Images:
-<img width="450px;" src="https://raw.githubusercontent.com/kushalshah0/portfolio/main/src/images/homepage.jpg"/>
-<img width="450px;" src="https://raw.githubusercontent.com/kushalshah0/portfolio/main/src/images/education.jpg"/>
+<img width="450px;" src="https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/homepage.jpg"/>
+<img width="450px;" src="https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/education.jpg"/>
 
 
 ## Table of Contents
