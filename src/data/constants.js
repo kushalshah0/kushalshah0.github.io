@@ -187,7 +187,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "https://raw.githubusercontent.com/kushalshah0/portfolio/main/src/images/tcioe.jpg",
+    img: "https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/tcioe.jpg",
     school: "IOE Thapathali Campus, Thapathali",
     date: "2023 - Present",
     grade: "*",
@@ -196,7 +196,7 @@ export const education = [
   },
   {
     id: 1,
-    img: "https://raw.githubusercontent.com/kushalshah0/portfolio/main/src/images/mmc.jpg",
+    img: "https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/mmc.jpg",
     school: "Makawanpur Multiple Campus, Hetauda",
     date: "2019 - 2022",
     grade: "3.50",
@@ -213,7 +213,7 @@ export const projects = [
     description:
       " Streamline your tasks effortlessly with our React.js-powered To-Do app. Seamlessly organize your day, manage priorities, and boost productivity with an intuitive and user-friendly interface. Stay on top of your responsibilities, track progress, and accomplish more with ease.",
     image:
-      "https://raw.githubusercontent.com/kushalshah0/portfolio/main/src/images/to-do-list-app.png",
+      "https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/to-do-list-app.png",
     tags: ["React Js", "Node Js"],
     category: "web app",
     github: "https://github.com/kushalshah0/to-do-list-app",
