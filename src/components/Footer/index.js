@@ -84,6 +84,7 @@ const Copyright = styled.p`
 `;
 
 function Footer() {
+  const year = new Date().getFullYear();
   return (
     <FooterContainer>
       <FooterWrapper>
@@ -101,7 +102,7 @@ function Footer() {
           <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2023 Kushal Shah
+          &copy; {year} Kushal Shah
         </Copyright>
 
       </FooterWrapper>
