@@ -226,7 +226,7 @@ export const projects = [
     description:
       " Experience real-time weather updates with our intuitive web app. Stay informed about current weather conditions, forecasts, and more, all in one place. With sleek design and user-friendly interface, accessing weather information has never been easier. Whether you're planning a weekend getaway or just want to stay prepared, our weather web app keeps you ahead of the elements",
     image:
-      "https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/to-do-list-app.png",
+      "https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/weather-app.png",
     tags: ["HTML", "CSS", "JS"],
     category: "web app",
     github: "https://github.com/kushalshah0/weather-app",
