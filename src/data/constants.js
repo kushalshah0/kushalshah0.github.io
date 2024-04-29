@@ -219,4 +219,17 @@ export const projects = [
     github: "https://github.com/kushalshah0/to-do-list-app",
     webapp: "https://kushalshah0.github.io/to-do-list-app/",
   },
+  {
+    id: 1,
+    title: "Weather App",
+    date: "Jul 2021",
+    description:
+      " Experience real-time weather updates with our intuitive web app. Stay informed about current weather conditions, forecasts, and more, all in one place. With sleek design and user-friendly interface, accessing weather information has never been easier. Whether you're planning a weekend getaway or just want to stay prepared, our weather web app keeps you ahead of the elements",
+    image:
+      "https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/to-do-list-app.png",
+    tags: ["HTML", "CSS", "JS"],
+    category: "web app",
+    github: "https://github.com/kushalshah0/weather-app",
+    webapp: "https://kushalshah0.github.io/weather-app/", 
+  },
 ];
