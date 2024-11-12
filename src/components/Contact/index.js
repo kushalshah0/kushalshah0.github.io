@@ -148,7 +148,7 @@ const Contact = () => {
         <Title>Contact</Title>
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm>
-          <ContactEmail>Get in Touch : contact@kushalshah.com.np</ContactEmail>
+          <ContactEmail>Get in Touch : dev@kushalshah.com.np</ContactEmail>
 
         </ContactForm>
         <Snackbar
