@@ -26,7 +26,7 @@ export const skills = [
         name: "React Js",
         image:
           "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
-      }, 
+      },
       {
         name: "Next Js",
         image:
@@ -209,9 +209,8 @@ export const projects = [
   {
     id: 0,
     title: "To-Do List App",
-    date: "Jun 2021",
     description:
-      " Streamline your tasks effortlessly with our React.js-powered To-Do app. Seamlessly organize your day, manage priorities, and boost productivity with an intuitive and user-friendly interface. Stay on top of your responsibilities, track progress, and accomplish more with ease.",
+      "Streamline your tasks effortlessly with our React.js-powered To-Do app. Seamlessly organize your day, manage priorities, and boost productivity with an intuitive and user-friendly interface. Stay on top of your responsibilities, track progress, and accomplish more with ease.",
     image:
       "https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/to-do-list-app.png",
     tags: ["React Js", "Node Js"],
@@ -222,14 +221,24 @@ export const projects = [
   {
     id: 1,
     title: "Weather App",
-    date: "Jul 2021",
     description:
-      " Experience real-time weather updates with our intuitive web app. Stay informed about current weather conditions, forecasts, and more, all in one place. With sleek design and user-friendly interface, accessing weather information has never been easier. Whether you're planning a weekend getaway or just want to stay prepared, our weather web app keeps you ahead of the elements",
+      "Experience real-time weather updates with our intuitive web app. Stay informed about current weather conditions, forecasts, and more, all in one place. With sleek design and user-friendly interface, accessing weather information has never been easier. Whether you're planning a weekend getaway or just want to stay prepared, our weather web app keeps you ahead of the elements",
     image:
       "https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/weather-app.png",
     tags: ["HTML", "CSS", "JS"],
     category: "web app",
     github: "https://github.com/kushalshah0/weather-app",
-    webapp: "https://kushalshah0.github.io/weather-app/", 
+    webapp: "https://kushalshah0.github.io/weather-app/",
+  },
+  {
+    id: 2,
+    title: "Password Manager",
+    description:
+      "Securely store and manage your passwords with our intuitive password manager. Enjoy features like password generation, auto-fill, and encryption to keep your sensitive information safe. With a user-friendly interface, managing your passwords has never been easier. Whether you're logging into your favorite websites or managing multiple accounts, our password manager ensures your data is protected.",
+    image: "https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/password-manager.png",
+    tags: ["MongoDB", "Express", "React", "Node.js"],
+    category: "web app",
+    github: "https://github.com/kushalshah0/password-manager",
+    webapp: "https://kushalshah0.github.io/password-manager/",
   },
 ];
