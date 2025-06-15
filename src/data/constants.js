@@ -239,6 +239,6 @@ export const projects = [
     tags: ["MongoDB", "Express", "React", "Node.js"],
     category: "web app",
     github: "https://github.com/kushalshah0/password-manager",
-    webapp: "https://kushalshah0.github.io/password-manager/",
+    webapp: "https://passmanager01.pages.dev/",
   },
 ];
