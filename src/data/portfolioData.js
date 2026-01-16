@@ -1,5 +1,10 @@
 // Portfolio Data - filled from kushalshah0.github.io
 
+// Import project images
+import todoListImg from '../assets/to-do-list-app.png';
+import weatherAppImg from '../assets/weather-app.png';
+import passwordManagerImg from '../assets/password-manager.png';
+
 export const personalInfo = {
   name: "Kushal Shah",
   role: "Full Stack Developer",
@@ -67,8 +72,7 @@ export const projects = [
     title: "To-Do List App",
     description:
       "Streamline your tasks effortlessly with a React.js-powered to-do app. Organize your day, manage priorities, and boost productivity with an intuitive interface.",
-    image:
-      "https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/to-do-list-app.png",
+    image: todoListImg,
     tags: ["React Js", "Node Js"],
     githubUrl: "https://github.com/kushalshah0/to-do-list-app",
     liveUrl: "https://kushalshah0.github.io/to-do-list-app/",
@@ -79,8 +83,7 @@ export const projects = [
     title: "Weather App",
     description:
       "Real-time weather updates with an intuitive UI. Access current conditions, forecasts, and more in one place.",
-    image:
-      "https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/weather-app.png",
+    image: weatherAppImg,
     tags: ["HTML", "CSS", "JS"],
     githubUrl: "https://github.com/kushalshah0/weather-app",
     liveUrl: "https://kushalshah0.github.io/weather-app/",
@@ -91,8 +94,7 @@ export const projects = [
     title: "Password Manager",
     description:
       "Securely store and manage passwords with features like password generation and encryption to keep sensitive information safe.",
-    image:
-      "https://raw.githubusercontent.com/kushalshah0/kushalshah0.github.io/main/src/images/password-manager.png",
+    image: passwordManagerImg,
     tags: ["MongoDB", "Express", "React", "Node.js"],
     githubUrl: "https://github.com/kushalshah0/password-manager",
     liveUrl: "https://passmanager01.pages.dev/",

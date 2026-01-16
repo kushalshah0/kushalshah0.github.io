@@ -27,12 +27,12 @@ const ProjectCard = ({ project }) => {
       className="glass-card rounded-2xl overflow-hidden group border border-white/5 hover:border-primary/50 transition-colors"
     >
       {/* Project Image */}
-      <div className="relative h-48 overflow-hidden bg-muted">
+      <div className="relative h-56 overflow-hidden bg-secondary/20">
         {project.image ? (
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-purple-500/20">

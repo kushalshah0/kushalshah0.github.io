@@ -110,7 +110,7 @@ const Hero = () => {
   const scrollTo = (id) => document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-28 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 md:pt-28 overflow-hidden">
 
       {/* Abstract Background Shapes */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse-glow" />
