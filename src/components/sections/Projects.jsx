@@ -3,8 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from '../../hooks/useInView';
 import { projects } from '../../data/portfolioData';
 import ProjectCard from '../ui/ProjectCard';
+import { useMobile } from '../../hooks/useMobile';
 
 const Projects = () => {
+  const isMobile = useMobile();
   const [ref, isInView] = useInView({ threshold: 0.1 });
   const [filter, setFilter] = useState('featured');
 
@@ -19,13 +21,13 @@ const Projects = () => {
   }, [filter]);
 
   const container = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
+    hidden: { opacity: isMobile ? 1 : 0 },
+    visible: { opacity: 1, transition: { staggerChildren: isMobile ? 0 : 0.08 } },
   };
 
   const item = {
-    hidden: { opacity: 0, y: 12 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+    hidden: { opacity: isMobile ? 1 : 0, y: isMobile ? 0 : 12 },
+    visible: { opacity: 1, y: 0, transition: { duration: isMobile ? 0 : 0.45 } },
   };
 
   return (

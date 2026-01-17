@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import { useInView } from '../../hooks/useInView';
 import { Mail, MapPin, Send, CheckCircle, AlertCircle, ArrowRight } from 'lucide-react';
 import { personalInfo } from '../../data/portfolioData';
+import { useMobile } from '../../hooks/useMobile';
 
 const Contact = () => {
+  const isMobile = useMobile();
   const [ref, isInView] = useInView({ threshold: 0.15 });
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState({ type: '', message: '' });
@@ -34,7 +36,10 @@ const Contact = () => {
     <section id="contact" className="section-container relative">
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -z-10" />
 
-      <motion.div ref={ref} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
+      <motion.div ref={ref}
+        initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        animate={isMobile ? { opacity: 1, y: 0 } : (isInView ? { opacity: 1, y: 0 } : {})}
+        transition={{ duration: isMobile ? 0 : 0.6 }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
 
           {/* Left: Info */}

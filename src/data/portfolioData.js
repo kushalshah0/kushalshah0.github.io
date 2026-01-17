@@ -56,7 +56,6 @@ export const skills = {
     "GitHub",
     "Docker",
     "Netlify",
-    "VS Code",
     "Postman",
     "Figma",
     "Android Studio",

@@ -3,16 +3,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Mail, Menu, X, Moon, Sun } from 'lucide-react';
 import { navLinks, socialLinks, personalInfo } from '../../data/portfolioData';
 import { useTheme } from '../../context/ThemeContext';
+import { useMobile } from '../../hooks/useMobile';
 
 const Navbar = () => {
+  const isMobile = useMobile();
   const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    const updateScrollDir = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 50);
 
       // Update active section based on scroll position
       const sections = navLinks.map(link => link.href.substring(1));
@@ -25,6 +31,15 @@ const Navbar = () => {
         return false;
       });
       if (current) setActiveSection(current);
+
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScrollDir);
+        ticking = true;
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -49,7 +64,7 @@ const Navbar = () => {
   return (
     <>
       <motion.nav
-        initial={{ y: -100 }}
+        initial={isMobile ? { y: 0 } : { y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-4' : 'py-6'
           }`}

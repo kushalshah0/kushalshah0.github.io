@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Terminal, Code2, Cpu } from 'lucide-react';
 import { personalInfo } from '../../data/portfolioData';
+import { useMobile } from '../../hooks/useMobile';
 
 const TypewriterLoop = ({ texts, typingSpeed = 50, deletingSpeed = 30, pauseDuration = 2000 }) => {
   const [text, setText] = useState('');
@@ -107,23 +108,25 @@ const CodeCard = () => (
 );
 
 const Hero = () => {
+  const isMobile = useMobile();
   const scrollTo = (id) => document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 md:pt-28 overflow-hidden">
+    <section id="home" className="relative min-h-[auto] md:min-h-screen flex items-start md:items-center justify-center pt-32 pb-20 md:pt-32 md:pb-0 overflow-hidden">
 
       {/* Abstract Background Shapes */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse-glow" />
-      <div className="absolute bottom-20 left-0 w-72 h-72 bg-purple-500/20 rounded-full blur-[80px] -z-10 animate-pulse-glow" style={{ animationDelay: '2s' }} />
+      {/* Abstract Background Shapes - Hidden on mobile for performance */}
+      <div className="hidden md:block absolute top-20 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse-glow" />
+      <div className="hidden md:block absolute bottom-20 left-0 w-72 h-72 bg-purple-500/20 rounded-full blur-[80px] -z-10 animate-pulse-glow" style={{ animationDelay: '2s' }} />
 
       <div className="section-container !py-0 relative z-10 w-full pl-4 sm:pl-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="space-y-6 md:space-y-8"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 text-sm text-primary font-medium">
               <span className="relative flex h-2 w-2">
@@ -144,8 +147,8 @@ const Hero = () => {
                 I build <TypewriterLoop
                   texts={[
                     "scalable full-stack apps.",
-                    "high-performance backends.",
-                    "interactive user interfaces."
+                    "robust backends.",
+                    "interactive UIs."
                   ]}
                 />
               </div>
@@ -159,7 +162,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollTo('#projects')}
-                className="px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-blue-600 text-white font-medium flex items-center gap-2 shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all"
+                className="px-6 py-3 md:px-8 md:py-4 rounded-xl bg-gradient-to-r from-primary to-blue-600 text-white font-medium flex items-center gap-2 shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all text-sm md:text-base"
               >
                 View Work <ArrowRight size={20} />
               </motion.button>
@@ -168,7 +171,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollTo('#contact')}
-                className="px-8 py-4 rounded-xl bg-background/50 backdrop-blur-sm border border-white/10 text-foreground font-medium hover:bg-white/5 transition-all"
+                className="px-6 py-3 md:px-8 md:py-4 rounded-xl bg-background/50 backdrop-blur-sm border border-white/10 text-foreground font-medium hover:bg-white/5 transition-all text-sm md:text-base"
               >
                 Contact Me
               </motion.button>
@@ -179,42 +182,46 @@ const Hero = () => {
 
           {/* Right Side Visual */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={isMobile ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: isMobile ? 0 : 0.8, delay: isMobile ? 0 : 0.2 }}
             className="hidden lg:block relative"
           >
             <CodeCard />
 
-            {/* Floating Icons */}
-            <motion.div
-              animate={{ y: [0, -20, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-10 -right-10 p-4 bg-background/50 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl"
-            >
-              <Code2 size={32} className="text-blue-400" />
-            </motion.div>
+            {/* Floating Icons - Hidden on mobile/tablet, shown on desktop */}
+            <div className="hidden lg:block">
 
-            <motion.div
-              animate={{ y: [0, 20, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute -bottom-10 -left-10 p-4 bg-background/50 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl"
-            >
-              <Terminal size={32} className="text-purple-400" />
-            </motion.div>
+              {/* Floating Icons */}
+              <motion.div
+                animate={{ y: [0, -20, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute -top-10 -right-10 p-4 bg-background/50 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl"
+              >
+                <Code2 size={32} className="text-blue-400" />
+              </motion.div>
 
-            <motion.div
-              animate={{ x: [0, 15, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-              className="absolute top-1/2 -right-20 p-4 bg-background/50 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl"
-            >
-              <Cpu size={32} className="text-green-400" />
-            </motion.div>
+              <motion.div
+                animate={{ y: [0, 20, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+                className="absolute -bottom-10 -left-10 p-4 bg-background/50 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl"
+              >
+                <Terminal size={32} className="text-purple-400" />
+              </motion.div>
+
+              <motion.div
+                animate={{ x: [0, 15, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+                className="absolute top-1/2 -right-20 p-4 bg-background/50 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl"
+              >
+                <Cpu size={32} className="text-green-400" />
+              </motion.div>
+            </div>
           </motion.div>
 
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

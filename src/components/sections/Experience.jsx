@@ -1,12 +1,15 @@
 import { motion } from 'framer-motion';
 import { experience } from '../../data/portfolioData';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import { useMobile } from '../../hooks/useMobile';
 
 const Experience = () => {
+  const isMobile = useMobile();
+
   return (
     <section id="experience" className="section-container">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="max-w-3xl mx-auto text-center mb-16"
@@ -27,10 +30,10 @@ const Experience = () => {
           {experience.map((item, index) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: isMobile ? 0 : index * 0.1 }}
               className={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
                 }`}
             >

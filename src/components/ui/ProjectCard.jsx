@@ -24,7 +24,7 @@ const ProjectCard = ({ project }) => {
       animate="visible"
       exit="exit"
       whileHover={{ y: -10 }}
-      className="glass-card rounded-2xl overflow-hidden group border border-white/5 hover:border-primary/50 transition-colors"
+      className="glass-card rounded-2xl overflow-hidden group border border-white/5 hover:border-primary/50 transition-colors will-change-transform"
     >
       {/* Project Image */}
       <div className="relative h-56 overflow-hidden bg-secondary/20">
