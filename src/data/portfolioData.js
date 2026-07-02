@@ -105,6 +105,18 @@ export const experience = [
   {
     id: 1,
     type: "work",
+    title: "MERN Stack Developer Intern",
+    company: "CloudTech Services",
+    location: "Kathmandu, Nepal",
+    period: "Jul 2026 - Present",
+    description: [
+      "Working as a MERN Stack Developer Intern, contributing to full-stack web application development using MongoDB, Express.js, React, and Node.js.",
+      "Collaborating with the development team to build and maintain scalable web solutions.",
+    ],
+  },
+  {
+    id: 2,
+    type: "work",
     title: "Freelancing",
     company: "Independent",
     location: "Remote",
@@ -115,7 +127,7 @@ export const experience = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     type: "work",
     title: "Open Source Contributor",
     company: "Open Source",
@@ -127,7 +139,7 @@ export const experience = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     type: "education",
     title: "Bachelor In Computer Engineering",
     company: "IOE Thapathali Campus, Thapathali",
@@ -138,7 +150,7 @@ export const experience = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     type: "education",
     title: "ISC (XII), Science with Computer",
     company: "Makawanpur Multiple Campus, Hetauda",
@@ -146,7 +158,6 @@ export const experience = [
     period: "2019 - 2022",
     description: [
       "Completed high school education (2019-2022) with a focus on Science and Computer.",
-      "Grade: 3.50",
     ],
   },
 ];

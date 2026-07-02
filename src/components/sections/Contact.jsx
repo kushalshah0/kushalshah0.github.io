@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../../hooks/useInView';
 import { Mail, MapPin, Send, CheckCircle, AlertCircle, ArrowRight } from 'lucide-react';
@@ -16,17 +16,35 @@ const Contact = () => {
     setFormData((p) => ({ ...p, [e.target.name]: e.target.value }));
   };
 
+  useEffect(() => {
+    if (!status.message) return;
+    const timer = setTimeout(() => setStatus({ type: '', message: '' }), 3000);
+    return () => clearTimeout(timer);
+  }, [status.message]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus({ type: '', message: '' });
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setStatus({ type: 'success', message: "Message sent successfully!" });
-      setFormData({ name: '', email: '', message: '' });
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: 'b7fa0521-9482-47d9-a429-1daa7e6ccaec',
+          ...formData,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus({ type: 'success', message: 'Message sent successfully!' });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus({ type: 'error', message: data.message || 'Failed to send message.' });
+      }
     } catch {
-      setStatus({ type: 'error', message: 'Failed to send message.' });
+      setStatus({ type: 'error', message: 'Something went wrong. Please try again.' });
     } finally {
       setIsSubmitting(false);
     }
