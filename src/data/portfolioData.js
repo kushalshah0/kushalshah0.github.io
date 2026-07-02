@@ -1,10 +1,5 @@
 // Portfolio Data - filled from kushalshah0.github.io
 
-// Import project images
-import todoListImg from '../assets/to-do-list-app.png';
-import weatherAppImg from '../assets/weather-app.png';
-import passwordManagerImg from '../assets/password-manager.png';
-
 export const personalInfo = {
   name: "Kushal Shah",
   role: "Full Stack Developer",
@@ -68,37 +63,104 @@ export const skills = {
 export const projects = [
   {
     id: 1,
-    title: "To-Do List App",
+    title: "TeleVault – Telegram Cloud Storage",
     description:
-      "Streamline your tasks effortlessly with a React.js-powered to-do app. Organize your day, manage priorities, and boost productivity with an intuitive interface.",
-    image: todoListImg,
-    tags: ["React Js", "Node Js"],
-    githubUrl: "https://github.com/kushalshah0/to-do-list-app",
-    liveUrl: "https://kushalshah0.github.io/to-do-list-app/",
+      "File storage system via Telegram bots with a full web UI for upload and retrieval, built with Node.js and the Telegram Bot API. Cost-efficient and scalable through creative API integration.",
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fvault.kushal.qzz.io%2F?w=800",
+    tags: ["Node.js", "Telegram Bot API", "TypeScript"],
+    githubUrl: "https://github.com/kushalshah0/TeleVault",
+    liveUrl: "https://vault.kushal.qzz.io/",
     featured: true,
   },
   {
     id: 2,
-    title: "Weather App",
+    title: "VoidMail – Disposable Email",
     description:
-      "Real-time weather updates with an intuitive UI. Access current conditions, forecasts, and more in one place.",
-    image: weatherAppImg,
-    tags: ["HTML", "CSS", "JS"],
-    githubUrl: "https://github.com/kushalshah0/weather-app",
-    liveUrl: "https://kushalshah0.github.io/weather-app/",
+      "Temporary disposable email service with no signup and no tracking. Instantly generate throwaway inboxes for privacy-conscious browsing.",
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmail.kushal.qzz.io%2F?w=800",
+    tags: ["Node.js", "JavaScript"],
+    githubUrl: "https://github.com/kushalshah0/VoidMail",
+    liveUrl: "https://mail.kushal.qzz.io/",
     featured: true,
   },
   {
     id: 3,
-    title: "Password Manager",
+    title: "Hisab Barabar – Expense Splitter",
     description:
-      "Securely store and manage passwords with features like password generation and encryption to keep sensitive information safe.",
-    image: passwordManagerImg,
-    tags: ["MongoDB", "Express", "React", "Node.js"],
-    githubUrl: "https://github.com/kushalshah0/password-manager",
-    liveUrl: "https://passmanager01.pages.dev/",
+      "Cross-platform expense-splitting app for friends, roommates, and travel companions. Features equal/unequal/percentage splits, an optimized settlement algorithm to minimize transactions, Google OAuth, QR group sharing, and push notifications via Firebase.",
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fhisabbarabar.qzz.io%2F?w=800",
+    tags: ["React Native", "Next.js", "MongoDB", "TypeScript", "Firebase"],
+    githubUrl: null,
+    liveUrl: "https://hisabbarabar.qzz.io/",
     featured: true,
   },
+  {
+    id: 4,
+    title: "KeyHive – Password Manager",
+    description:
+      "Full-stack password manager with encrypted storage, secure authentication, and password generation. Built with TypeScript and modern security best practices.",
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fkeyhive.qzz.io%2F?w=800",
+    tags: ["TypeScript", "React", "MongoDB"],
+    githubUrl: "https://github.com/kushalshah0/KeyHive",
+    liveUrl: "https://keyhive.qzz.io/",
+    featured: true,
+  },
+  {
+    id: 5,
+    title: "FlowTeX – LaTeX Editor",
+    description:
+      "Online LaTeX editor with real-time preview and compilation, making it easy to write and render LaTeX documents directly in the browser.",
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Flatex.kushal.qzz.io%2F?w=800",
+    tags: ["React", "JavaScript", "LaTeX"],
+    githubUrl: "https://github.com/kushalshah0/FlowTeX",
+    liveUrl: "https://latex.kushal.qzz.io/",
+    featured: true,
+  },
+  {
+    id: 6,
+    title: "CookieVault – Session Management",
+    description:
+      "Secure cookie and session management system built with Next.js, TypeScript, and MongoDB, implementing authentication and modern encryption best practices.",
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcookie.kushal.qzz.io%2F?w=800",
+    tags: ["Next.js", "TypeScript", "MongoDB"],
+    githubUrl: "https://github.com/kushalshah0/CookieVault",
+    liveUrl: "https://cookie.kushal.qzz.io/",
+    featured: true,
+  },
+  {
+    id: 7,
+    title: "NeuraMind – AI Chat Assistant",
+    description:
+      "Real-time streaming AI chat interface with session management and syntax highlighting. Designed a scalable frontend architecture for LLM-based applications.",
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fneuramind.pages.dev%2F?w=800",
+    tags: ["React", "Vite", "Tailwind CSS"],
+    githubUrl: "https://github.com/kushalshah0/NeuraMind",
+    liveUrl: "https://neuramind.pages.dev/",
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "SharePulse – NEPSE Tracker",
+    description:
+      "Real-time Nepal Stock Exchange (NEPSE) monitoring dashboard with dynamic charts and portfolio tracking, built with React and Node.js.",
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fsharepulse.qzz.io%2F?w=800",
+    tags: ["React", "Node.js"],
+    githubUrl: "https://github.com/kushalshah0/SharePulse",
+    liveUrl: "https://sharepulse.qzz.io/",
+    featured: false,
+  },
+  {
+    id: 9,
+    title: "HTTP Server – Systems Programming",
+    description:
+      "Fully functional HTTP server built from scratch in C++ using TCP sockets, covering concurrency handling and HTTP protocol design. Demonstrates strong understanding of low-level backend and networking concepts.",
+    image: null,
+    tags: ["C++", "TCP Sockets", "Systems Programming"],
+    githubUrl: null,
+    liveUrl: null,
+    featured: false,
+  },
+  
 ];
 
 export const experience = [
