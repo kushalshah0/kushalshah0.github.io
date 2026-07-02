@@ -28,7 +28,7 @@ export const about = {
   ],
   stats: [
     { label: "Years Experience", value: "2020 - Present" },
-    { label: "Projects Completed", value: "3+" },
+    { label: "Projects Completed", value: "9+" },
     { label: "Technologies", value: "20+" },
     { label: "Open Source", value: "Active" },
   ],
