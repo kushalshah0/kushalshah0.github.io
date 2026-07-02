@@ -37,46 +37,6 @@ const About = () => {
       <motion.div ref={ref} initial="hidden" animate={isInView ? 'visible' : 'hidden'} variants={container}>
 
 
-        {/* Mobile DevCard - Only visible on mobile */}
-        <motion.div variants={item} className="lg:hidden max-w-sm mx-auto mb-8">
-          <div className="relative bg-black/40 border border-white/10 rounded-2xl p-6 font-mono text-[11px] md:text-sm shadow-2xl backdrop-blur-md">
-            {/* Card Glow */}
-            <div className="absolute -inset-px bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-2xl -z-10 blur-md opacity-50" />
-
-            <div className="flex items-center gap-2 mb-4 border-b border-white/5 pb-3">
-              <div className="flex gap-1.5">
-                <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-                <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-              </div>
-              <div className="ml-auto text-muted-foreground text-[10px] uppercase tracking-wider font-semibold">config.json</div>
-            </div>
-
-            <div className="relative">
-              <div className="space-y-2 text-muted-foreground leading-relaxed font-medium text-[10px] md:text-[11px]">
-                <div><span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> <span className="text-white">=</span> <span className="text-yellow-400">{'{'}</span></div>
-                <div className="pl-4"><span className="text-white">name:</span> <span className="text-green-400">'{personalInfo.name}'</span>,</div>
-                <div className="pl-4"><span className="text-white">role:</span> <span className="text-green-400">'{personalInfo.role}'</span>,</div>
-                <div className="pl-4"><span className="text-white">exp:</span> <span className="text-orange-400">'2020 - Present'</span>,</div>
-                <div className="pl-4"><span className="text-white">stack:</span> <span className="text-yellow-400">['React', 'Next.js']</span>,</div>
-                <div className="pl-4"><span className="text-white">hireable:</span> <span className="text-green-400">true</span></div>
-                <div className="text-yellow-400">{'}'}</div>
-              </div>
-
-              {/* Mobile Image (Inside Card, Absolute Top-Right) */}
-              <div className="absolute top-0 -right-2">
-                <div className="w-[95px] h-[95px] rounded-full overflow-hidden border-2 border-white/10 shadow-xl relative">
-                  <img
-                    src={profileImg}
-                    alt={personalInfo.name}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
 
         {/* Desktop Layout - Unified Glass Card */}
         <motion.div variants={item} className="glass-card p-8 md:p-10 rounded-3xl border border-white/5 relative overflow-hidden max-w-5xl mx-auto">
@@ -99,7 +59,12 @@ const About = () => {
 
             {/* Bio Text - Right Side */}
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Who I am</h3>
+              <div className="flex items-center gap-4 mb-4">
+                <h3 className="text-2xl font-bold text-foreground">Who I am</h3>
+                <div className="lg:hidden ml-auto w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 shadow-lg flex-shrink-0">
+                  <img src={profileImg} alt={personalInfo.name} loading="lazy" className="w-full h-full object-cover" />
+                </div>
+              </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
                 {about.description.map((p, idx) => (
                   <p key={idx}>{p}</p>
