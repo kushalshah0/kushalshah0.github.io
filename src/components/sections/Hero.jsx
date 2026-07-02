@@ -133,7 +133,7 @@ const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              Available for new opportunities
+              Currently @ CloudTech Services
             </div>
 
             <div>
@@ -167,14 +167,15 @@ const Hero = () => {
                 View Work <ArrowRight size={20} />
               </motion.button>
 
-              <motion.button
+              <motion.a
+                href="/kushalshah-cv.pdf"
+                download="Kushal_Shah_CV.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => scrollTo('#contact')}
-                className="px-6 py-3 md:px-8 md:py-4 rounded-xl bg-background/50 backdrop-blur-sm border border-white/10 text-foreground font-medium hover:bg-white/5 transition-all text-sm md:text-base"
+                className="px-6 py-3 md:px-8 md:py-4 rounded-xl bg-background/50 backdrop-blur-sm border border-white/10 text-foreground font-medium hover:bg-white/5 transition-all text-sm md:text-base flex items-center gap-2"
               >
-                Contact Me
-              </motion.button>
+                <Download size={18} /> Download CV
+              </motion.a>
             </div>
 
 
