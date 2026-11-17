@@ -167,17 +167,29 @@ export const experience = [
   {
     id: 1,
     type: "work",
-    title: "MERN Stack Developer Intern",
+    title: "Associate Software Engineer",
     company: "CloudTech Services",
     location: "Kathmandu, Nepal",
-    period: "Jul 2026 - Present",
+    period: "Nov 2026 - Present",
     description: [
-      "Working as a MERN Stack Developer Intern, contributing to full-stack web application development using MongoDB, Express.js, React, and Node.js.",
-      "Collaborating with the development team to build and maintain scalable web solutions.",
+      "Promoted to Associate Software Engineer after my internship, building and maintaining full-stack web applications.",
+      "Working with the team on feature development, code reviews, and delivering production-ready solutions.",
     ],
   },
   {
     id: 2,
+    type: "work",
+    title: "Software Engineer Intern",
+    company: "CloudTech Services",
+    location: "Kathmandu, Nepal",
+    period: "Jun 2026 - Nov 2026",
+    description: [
+      "Worked as a Software Engineer Intern, contributing to full-stack web application development using MongoDB, Express.js, React, and Node.js.",
+      "Collaborated with the development team to build and maintain scalable web solutions.",
+    ],
+  },
+  {
+    id: 3,
     type: "work",
     title: "Freelancing",
     company: "Independent",
@@ -189,7 +201,7 @@ export const experience = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     type: "work",
     title: "Open Source Contributor",
     company: "Open Source",
@@ -201,7 +213,7 @@ export const experience = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     type: "education",
     title: "Bachelor In Computer Engineering",
     company: "IOE Thapathali Campus, Thapathali",
@@ -212,7 +224,7 @@ export const experience = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     type: "education",
     title: "ISC (XII), Science with Computer",
     company: "Makawanpur Multiple Campus, Hetauda",
